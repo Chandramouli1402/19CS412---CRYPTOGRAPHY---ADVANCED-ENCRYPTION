@@ -1,8 +1,8 @@
- ## IMPLEMENTATION OF RSA
- # AIM :
- To write a C program to implement the RSA encryption algorithm.
+IMPLEMENTATION OF RSA
+AIM :
+To write a C program to implement the RSA encryption algorithm.
 
-## ALGORITHM:
+ALGORITHM:
 STEP-1: Select two co-prime numbers as p and q.
 
 STEP-2: Compute n as the product of p and q.
@@ -11,16 +11,14 @@ STEP-3: Compute (p-1)*(q-1) and store it in z.
 
 STEP-4: Select a random prime number e that is less than that of z.
 
-STEP-5: Compute the private key, d as e *
-mod-1
-(z).
+STEP-5: Compute the private key, d as e * mod-1 (z).
 
 STEP-6: The cipher text is computed as messagee *
 
 STEP-7: Decryption is done as cipherdmod n.
 
-## PROGRAM:
-```
+PROGRAM:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -82,49 +80,30 @@ int decryptedMessage = decrypt(ciphertext, d, n);
 printf("Decrypted message: %d\n", decryptedMessage);
 return 0;
 }
-```
-## OUTPUT:
-![Screenshot 2024-03-05 113517](https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/b96f8704-db74-4fb0-835d-078d58644625)
+OUTPUT:
+Screenshot 2024-03-15 141814
 
+RESULT :
+Thus the C program to implement RSA encryption technique had been implemented successfully
 
-## RESULT :
-
-Thus the C program to implement RSA encryption technique had been
-implemented successfully
-
-
-
-
-
-## IMPLEMENTATION OF DIFFIE HELLMAN KEY EXCHANGE ALGORITHM
-
-## AIM:
-
+IMPLEMENTATION OF DIFFIE HELLMAN KEY EXCHANGE ALGORITHM
+AIM:
 To implement the Diffie-Hellman Key Exchange algorithm using C language.
 
-
-## ALGORITHM:
-
+ALGORITHM:
 STEP-1: Both Alice and Bob shares the same public keys g and p.
 
 STEP-2: Alice selects a random public key a.
 
-STEP-3: Alice computes his secret key A as g
-a mod p.
+STEP-3: Alice computes his secret key A as g a mod p.
 
 STEP-4: Then Alice sends A to Bob.
 
+STEP-5: Similarly Bob also selects a public key b and computes his secret key as B and sends the same back to Alice.
 
-STEP-5: Similarly Bob also selects a public key b and computes his secret
-key as B and sends the same back to Alice.
+STEP-6: Now both of them compute their common secret key as the other one’s secret key power of a mod p.
 
-
-STEP-6: Now both of them compute their common secret key as the other
-one’s secret key power of a mod p.
-
-## PROGRAM: 
-
-```
+PROGRAM:
 #include <math.h>
 #include <stdio.h>
 // Power function to return value of a ^ b mod P
@@ -163,44 +142,31 @@ printf("Secret key for the Alice is : %lld\n", ka);
 printf("Secret Key for the Bob is : %lld\n", kb);
 return 0;
 }
-```
-## OUTPUT:
 
-<img width="342" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/a3f5b0fa-ef81-4215-9521-2a16c87cef68">
+OUTPUT:
+Screenshot 2024-03-15 141823
 
+RESULT:
+Thus the Diffie-Hellman key exchange algorithm had been successfully implemented using C.
 
-## RESULT: 
-
-Thus the Diffie-Hellman key exchange algorithm had been successfully
-implemented using C.
-
-
-
-
-
-## IMPLEMENTATION OF DES ALGORITHM
-
-## AIM:
+IMPLEMENTATION OF DES ALGORITHM
+AIM:
 To write a program to implement Data Encryption Standard (DES)
 
-## ALGORITHM :
-
+ALGORITHM :
 STEP-1: Read the 64-bit plain text.
 
 STEP-2: Split it into two 32-bit blocks and store it in two different arrays.
 
 STEP-3: Perform XOR operation between these two arrays.
 
-STEP-4: The output obtained is stored as the second 32-bit sequence and the
-original second 32-bit sequence forms the first part.
+STEP-4: The output obtained is stored as the second 32-bit sequence and the original second 32-bit sequence forms the first part.
 
-STEP-5: Thus the encrypted 64-bit cipher text is obtained in this way. Repeat the
-same process for the remaining plain text characters.
+STEP-5: Thus the encrypted 64-bit cipher text is obtained in this way. Repeat the same process for the remaining plain text characters.
 
-### PROGRAM :
-
-```
+PROGRAM :
 from cryptography.fernet import Fernet
+print("Enter the string: ")
 message = input()
 key = Fernet.generate_key()
 fernet = Fernet(key)
@@ -211,13 +177,9 @@ print("encrypted string: ", encMessage)
 decMessage = fernet.decrypt(encMessage).decode()
  
 print("decrypted string: ", decMessage)
-```
-## OUTPUT:
 
-<img width="756" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/23e74c08-7cea-4381-b9fe-97e247b17470">
+OUTPUT:
+Screenshot 2024-03-15 141116
 
-## RESULT:
-
-Thus the data encryption standard algorithm had been implemented
-successfully.
-
+RESULT:
+Thus the data encryption standard algorithm had been implemented successfully.
