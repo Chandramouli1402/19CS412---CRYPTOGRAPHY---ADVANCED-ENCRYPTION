@@ -21,6 +21,7 @@ STEP-7: Decryption is done as cipherdmod n.
 
 ## PROGRAM:
 ```
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -82,9 +83,11 @@ int decryptedMessage = decrypt(ciphertext, d, n);
 printf("Decrypted message: %d\n", decryptedMessage);
 return 0;
 }
+
 ```
 ## OUTPUT:
-![Screenshot 2024-03-05 113517](https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/b96f8704-db74-4fb0-835d-078d58644625)
+![WhatsApp Image 2024-03-15 at 14 39 53_a377643c](https://github.com/Chandramouli1402/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/113716783/ff284af5-508c-40ea-895f-a2507c5eceab)
+
 
 
 ## RESULT :
@@ -163,10 +166,12 @@ printf("Secret key for the Alice is : %lld\n", ka);
 printf("Secret Key for the Bob is : %lld\n", kb);
 return 0;
 }
+
 ```
 ## OUTPUT:
 
-<img width="342" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/a3f5b0fa-ef81-4215-9521-2a16c87cef68">
+![WhatsApp Image 2024-03-15 at 14 39 57_45213cd1](https://github.com/Chandramouli1402/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/113716783/e10c53f6-5ca2-4830-ab44-496437abda6a)
+
 
 
 ## RESULT: 
@@ -201,6 +206,7 @@ same process for the remaining plain text characters.
 
 ```
 from cryptography.fernet import Fernet
+print("Enter the string: ")
 message = input()
 key = Fernet.generate_key()
 fernet = Fernet(key)
@@ -211,10 +217,12 @@ print("encrypted string: ", encMessage)
 decMessage = fernet.decrypt(encMessage).decode()
  
 print("decrypted string: ", decMessage)
+
 ```
 ## OUTPUT:
 
-<img width="756" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/23e74c08-7cea-4381-b9fe-97e247b17470">
+![WhatsApp Image 2024-03-15 at 14 40 06_b3a75df6](https://github.com/Chandramouli1402/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/113716783/84f60a51-fb76-4192-a61c-5b98cb28a6dc)
+
 
 ## RESULT:
 
